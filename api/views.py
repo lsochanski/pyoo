@@ -66,7 +66,7 @@ def login(request):
 	# 	return HttpResponse(json.dumps({'success': False}))
 	return HttpResponse(json.dumps({'success': True, 'token': get_token(request)}))
 
-
+@xframe_options_exempt
 @csrf_exempt
 def lesson_check(request, lesson_no):
 	if not request.method == 'POST':
