@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.middleware.csrf import get_token
+from django.views.decorators.clickjacking import xframe_options_exempt
 from django.contrib.auth.models import User as DjangoUser
 
 from ast_validation.tools import is_class
